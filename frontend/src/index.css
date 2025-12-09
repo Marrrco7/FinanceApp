@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* You can add your own global styles below */
+
+:root {
+    color-scheme: dark light;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+body {
+    /* Tailwind + some defaults */
+    min-height: 100vh;
+    background-color: rgb(15 23 42); /* slate-900-ish */
+    color: rgb(241 245 249);         /* slate-100-ish */
+}
+
+#root {
+    min-height: 100vh;
+}
