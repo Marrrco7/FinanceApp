@@ -74,8 +74,7 @@ function App() {
                         className="block px-3 py-2 rounded-lg text-slate-500 cursor-not-allowed"
                         disabled
                     >
-                        Budgets (soon)
-                    </button>
+                        </button>
                 </nav>
                 <div className="p-4 border-t border-slate-800 text-xs text-slate-500">
                     Logged in as <span className="text-slate-300">demo@user</span>
