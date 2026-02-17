@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: financeapp-ingress
+  namespace: financeapp
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: financeapp.local
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: financeapp-api
+                port:
+                  number: 8080
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: financeapp-frontend
+                port:
+                  number: 80

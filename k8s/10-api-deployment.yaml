@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: financeapp-api
+  namespace: financeapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: financeapp-api
+  template:
+    metadata:
+      labels:
+        app: financeapp-api
+    spec:
+      containers:
+        - name: api
+          image: financeapp-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"
